@@ -43,6 +43,7 @@ const Register = props => {
                         .then(_ => _.json())
                         .then(createdUser => {
                             if (createdUser.hasOwnProperty("id")) {
+                              debugger
                                 localStorage.setItem("currentUserId", createdUser.id)
                                 props.history.push("/")
                             }
