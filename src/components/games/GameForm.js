@@ -49,6 +49,7 @@ export default props => {
                     description: game.description,
                     userId: parseInt(localStorage.getItem("currentUserId")),
                     isStarted: false,
+                    isCompleted: false,
                     date: Date.now() 
                     
                   

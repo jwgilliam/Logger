@@ -1,6 +1,6 @@
 import React, { useContext } from "react"
-import "./Game.css"
-import { GameContext } from "./GameProvider"
+import "../Game.css"
+import { GameContext } from "../GameProvider"
 
 
 export default ({ game, history }) => {
@@ -38,7 +38,6 @@ const completedCheckbox = ()=>{
       }}>Edit</button>
       </>
   }
-
 }
 
 const startedCheckbox = ()=>{
@@ -82,7 +81,7 @@ return (
 
       <label>Completed?</label>
       {completedCheckbox()}
-      <label>Game Started</label>
+      <label>Start Game</label>
       {startedCheckbox()}
     </div>
       
