@@ -37,7 +37,11 @@ export default props => {
                     id: game.id,
                     title: game.title,
                     description: game.description,
-                    userId: parseInt(localStorage.getItem("currentUserId"))
+                    userId: parseInt(localStorage.getItem("currentUserId")),
+                    isStarted: game.isStarted,
+                    isCompleted: game.isCompleted,
+                    review: game.review,
+                    date: Date.now()
                   
                  
                 })
@@ -50,6 +54,7 @@ export default props => {
                     userId: parseInt(localStorage.getItem("currentUserId")),
                     isStarted: false,
                     isCompleted: false,
+                    review: "",
                     date: Date.now() 
                     
                   

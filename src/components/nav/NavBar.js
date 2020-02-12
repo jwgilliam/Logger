@@ -12,11 +12,11 @@ export default (props) => {
             </div>
             <li className="navbar__item active">
                
-                <Link className="navbar__link" to="/">Home</Link>
+                <Link className="navbar__link" to="/">Backlog</Link>
             </li>
             <li className="navbar__item">
               
-                <Link className="navbar__link" to="/Backlog">Backlog</Link>
+                <Link className="navbar__link" to="/Active Games">Active Games</Link>
             </li>
             <li className="navbar__item">       
 
