@@ -80,6 +80,8 @@ return (
     <div className="game--btns">
     <div className="game--content">
 
+    
+
       <label>Completed?</label>
       {completedCheckbox()}
       <label>Game Started</label>
@@ -88,7 +90,9 @@ return (
       
 
 
-
+        <button className="noteButton" onClick={()=>{
+          history.push(`/games/notes/${game.id}`)
+        }}>Add Note</button>
 
 
         <button className="deleteGameButton" onClick={()=>{

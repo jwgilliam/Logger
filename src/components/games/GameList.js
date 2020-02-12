@@ -16,11 +16,9 @@ export default (props) => {
       <>
       <aside className="gameContainer">
 
-          <h1 className="page--title">Games</h1>
+          <h1 className="page--title">Active Games</h1>
 
-          <button onClick={() => props.history.push("/games/create")}>
-            New Game
-          </button>
+         
           <div className="activeGames">
               {
                   activeGames.map(game => {

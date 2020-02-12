@@ -26,6 +26,7 @@ export const GamesProvider = (props) => {
             .then(getGames)
     }
 
+
     const patchGame = game => {
       return fetch(`http://localhost:8088/games/${game.id}`, {
           method: "PATCH",

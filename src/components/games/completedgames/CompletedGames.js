@@ -69,15 +69,17 @@ const startedCheckbox = ()=>{
   }
 }
 
+
 return (
   
-  <section className="game--card">
+  <section className="game__card">
 
       
-      <div className="game--name">{game.title}</div>
-      <div className="game--description">{game.description}</div>
-    <div className="game--btns">
-    <div className="game--content">
+      <div className="game__name">{game.title}</div>
+      <div className="game__description">{game.description}</div>
+      <div className="game__review">{game.review}</div>
+    <div className="game__btns">
+    <div className="game__content">
 
       <label>Completed?</label>
       {completedCheckbox()}
@@ -85,10 +87,10 @@ return (
       {startedCheckbox()}
     </div>
       
-
-
-
-
+      <button className="reviewButton" onClick={() => {
+      
+        history.push (`/games/review/${game.id}`)
+      }}>Rate and Review</button>
 
         <button className="deleteGameButton" onClick={()=>{
           
