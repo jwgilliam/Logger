@@ -17,19 +17,20 @@ export default (props) => {
   <Route path="/games/notes/:gameId" render={
                       props => <NoteForm {...props} />
                     } />
+    
 
-  </NoteProvider>
+
 
   <GamesProvider>
   <Route exact path="/Active Games" render ={
-                            props => <GameList { ...props} />
-                        } />
+    props => <GameList { ...props} />
+  } />
                   <Route path="/games/create" render={
-                                  props => <GameForm {...props} />
-                              } />
+                    props => <GameForm {...props} />
+                  } />
                   <Route path="/games/edit/:gameId(\d+)" render={
-                        props => <GameForm {...props} />
-                    } />
+                    props => <GameForm {...props} />
+                  } />
                     <Route path="/games/review/:gameId" render={
                       props => <ReviewForm {...props} />
                     } />
@@ -40,12 +41,13 @@ export default (props) => {
                     
 
   <Route exact path="/" render ={
-                            props => <BacklogList { ...props} />
-                        } />
+    props => <BacklogList { ...props} />
+  } />
   <Route exact path="/Completed Games" render ={
-                props => <CompletedGamesList {...props} />
+    props => <CompletedGamesList {...props} />
   }/>
   </GamesProvider>
+  </NoteProvider>
   </>
   )
 }

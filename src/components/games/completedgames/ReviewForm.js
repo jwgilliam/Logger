@@ -27,7 +27,7 @@ export default props => {
             <fieldset>
               <div className="form-group">
                 <label htmlFor="Description">Review:</label>
-                <input type="text" name="review" required autoFocus className="form-control"
+                <input type="textfield" name="review" required autoFocus className="form-control"
                         proptype="varchar"
                         ref={review}
                         placeholder="Review"

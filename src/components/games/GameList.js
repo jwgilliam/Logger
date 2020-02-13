@@ -2,6 +2,8 @@ import React, { useContext } from "react"
 import { GameContext } from "./GameProvider"
 import Game from "./Game"
 import "./Game.css"
+import { NoteContext} from "../notes/NoteProvider"
+import Note from "../notes/Note"
 
 
 
@@ -11,6 +13,7 @@ export default (props) => {
   const  currentUserId  = parseInt(localStorage.getItem("currentUserId"), 10)
   const currentUserGames = games.filter(game => game.userId === currentUserId)
   const activeGames = currentUserGames.filter(game => game.isStarted === true && game.isCompleted === false)
+  
 
   return (
       <>
@@ -22,7 +25,7 @@ export default (props) => {
           <div className="activeGames">
               {
                   activeGames.map(game => {
-                    console.log("Displaying games")
+                  
                       return <Game {...props} key={game.id} game={game} />
                   })
               }
