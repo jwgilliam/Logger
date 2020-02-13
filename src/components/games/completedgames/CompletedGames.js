@@ -1,10 +1,14 @@
 import React, { useContext } from "react"
 import "../Game.css"
 import { GameContext } from "../GameProvider"
+import { NoteContext } from "../../notes/NoteProvider"
+import Note from "../../notes/Note"
 
 
-export default ({ game, history }) => {
+export default ({ game, history, props }) => {
   const { deleteGame, patchGame } = useContext(GameContext)
+  const { notes } = useContext(NoteContext)
+  const gameNotes = notes.filter(note => note.gameId === game.id)
 
 
 const completedCheckbox = ()=>{
@@ -77,7 +81,19 @@ return (
       
       <div className="game__name">{game.title}</div>
       <div className="game__description">{game.description}</div>
+      <div className="game__notes">
+      {
+                  gameNotes.map(note => {
+                  
+                      return <Note {...props} key={note.id} note={note} />
+                  })
+                }
+
+      </div>
+      
       <div className="game__review">{game.review}</div>
+
+
     <div className="game__btns">
     <div className="game__content">
 

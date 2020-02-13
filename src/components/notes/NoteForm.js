@@ -75,6 +75,7 @@ export default props => {
                 onClick={evt => {
                     evt.preventDefault()
                     constructNewNote()
+                    
                 }}
                 className="btn btn-primary">
                 {editMode ? "Save Updates" : "Save Note"}
