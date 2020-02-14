@@ -26,7 +26,7 @@ export default (props) => {
               {
                   activeGames.map(game => {
                   
-                      return <Game {...props} key={game.id} game={game} />
+                      return <Game {...props} key={game.id} game={game} props={props} />
                   })
               }
           </div>

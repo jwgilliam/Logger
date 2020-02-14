@@ -4,11 +4,11 @@ import { GameContext } from "../GameProvider"
 
 
 export default props => {
-  const { deleteGame, games, patchGame } = useContext(GameContext)
+  const { games, patchGame } = useContext(GameContext)
 
   const gameId = props.match.params.gameId
   const game = games.find(g => g.id === gameId)
-  console.log(gameId)
+  
   
   const review = useRef()
 

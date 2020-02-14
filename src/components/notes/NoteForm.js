@@ -74,7 +74,8 @@ export default props => {
             <button type="submit"
                 onClick={evt => {
                     evt.preventDefault()
-                    constructNewNote()
+                    constructNewNote() 
+                    
                     
                 }}
                 className="btn btn-primary">

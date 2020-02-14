@@ -8,6 +8,7 @@ export default props => {
     const [game, setGames] = useState({})
 
     const editMode = props.match.params.hasOwnProperty("gameId")
+    
 
     const handleControlledInputChange = (event) => {
      
@@ -74,7 +75,7 @@ export default props => {
                     <input type="text" name="title" required autoFocus className="form-control"
                         proptype="varchar"
                         placeholder="Title"
-                        defaultValue=""
+                        value={game.title}
                         onChange={handleControlledInputChange}
                     />
                 </div>
@@ -85,7 +86,7 @@ export default props => {
                 <input type="text" name="description" required autoFocus className="form-control"
                         proptype="varchar"
                         placeholder="Description"
-                        defaultValue=""
+                        value={game.description}
                         onChange={handleControlledInputChange}
                     />
               </div>

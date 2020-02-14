@@ -85,7 +85,7 @@ return (
       {
                   gameNotes.map(note => {
                   
-                      return <Note {...props} key={note.id} note={note} />
+                      return <Note {...props} key={note.id} note={note} history={props.history} />
                   })
                 }
       </div>
