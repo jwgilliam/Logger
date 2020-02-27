@@ -36,7 +36,7 @@ const completedCheckbox = ()=>{
           }
           patchGame(patchedGame).then(()=> history.push("/"))
       }}></input>
-      <button onClick={() => {
+      <button className="btn" onClick={() => {
         history.push(`/games/edit/${game.id}`)
 
       }}>Edit</button>
@@ -76,7 +76,7 @@ const startedCheckbox = ()=>{
 
 return (
   
-  <section className="game__card">
+  <section className="game--card">
 
       
       <div className="game__name">{game.title}</div>
@@ -103,12 +103,12 @@ return (
       {startedCheckbox()}
     </div>
       
-      <button className="reviewButton" onClick={() => {
+      <button className="btn" onClick={() => {
       
         history.push (`/games/review/${game.id}`)
       }}>Rate and Review</button>
 
-        <button className="deleteGameButton" onClick={()=>{
+        <button className="btn" onClick={()=>{
           
           deleteGame(game).then(()=> history.push("/"))
         }

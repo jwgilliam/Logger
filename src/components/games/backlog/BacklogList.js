@@ -18,7 +18,7 @@ export default (props) => {
 
           <h1 className="page--title">Backlog</h1>
 
-          <button onClick={() => props.history.push("/games/create")}>
+          <button className="btn" onClick={() => props.history.push("/games/create")}>
             New Game
           </button>
 

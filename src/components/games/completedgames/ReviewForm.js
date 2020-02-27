@@ -36,7 +36,7 @@ export default props => {
                     />
               </div>
             </fieldset>
-            <button type="submit"
+            <button className="btn" type="submit"
                 onClick={evt => {
 
                   

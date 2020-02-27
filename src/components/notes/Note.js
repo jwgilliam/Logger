@@ -18,7 +18,7 @@ return (
     
 
 
-        <button className="deleteNoteButton" onClick={()=>{
+        <button className="btn" onClick={()=>{
           
           deleteNote(note).then(()=> history.push("/Active Games"))
         }

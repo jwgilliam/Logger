@@ -36,10 +36,7 @@ const completedCheckbox = ()=>{
           }
           patchGame(patchedGame).then(()=> history.push("/"))
       }}></input>
-      <button onClick={() => {
-        history.push(`/games/edit/${game.id}`)
-
-      }}>Edit</button>
+     
       </>
   }
 
@@ -79,7 +76,7 @@ return (
   <section className="game--card">
 
       
-      <div className="game--name">{game.title}</div>
+      <h2 className="game--name">{game.title}</h2>
       <div className="game--description">{game.description}</div>
       <div className="game__notes">
       {
@@ -90,28 +87,31 @@ return (
                 }
       </div>
     <div className="game--btns">
-    <div className="game--content">
-
-    
-
-      <label>Completed?</label>
-      {completedCheckbox()}
-      <label>Game Started</label>
-      {startedCheckbox()}
-    </div>
       
 
+    <button className="btn" onClick={() => {
+        history.push(`/games/edit/${game.id}`)
 
-        <button className="noteButton" onClick={()=>{
-          history.push(`/games/notes/${game.id}`)
-        }}>Add Note</button>
+      }}>Edit</button>
 
 
-        <button className="deleteGameButton" onClick={()=>{
+        <button className="btn" onClick={()=>{
           
           deleteGame(game).then(()=> history.push("/"))
         }
       }>Delete</button>
+                <button className="btn" onClick={()=>{
+                  history.push(`/games/notes/${game.id}`)
+                }}>Add Note</button>
+    </div>
+    <div className="game--content">
+
+    
+
+      <label>Game Started</label>
+      {startedCheckbox()}
+      <label>Completed?</label>
+      {completedCheckbox()}
     </div>
   </section>
 )
