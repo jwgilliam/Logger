@@ -71,10 +71,11 @@ export default props => {
                 </div>
             </fieldset>
            
-            <button type="submit"
+            <button className="btn" type="submit"
                 onClick={evt => {
                     evt.preventDefault()
-                    constructNewNote()
+                    constructNewNote() 
+                    
                     
                 }}
                 className="btn btn-primary">

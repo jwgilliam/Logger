@@ -8,7 +8,7 @@
   margin-left: -10px;
   padding-bottom: 20px;  
   padding-top: 20px;  
-  background-color: #1d623c;
+  background-color: #317873;
   background-size: cover;
   align-items: flex-end;
   position: sticky;
@@ -37,7 +37,7 @@
 }
 
 .navbar__link:hover {
-  color: goldenrod;
+  color: #a3c1ad;
   text-decoration: underline;
   cursor: pointer;
 }

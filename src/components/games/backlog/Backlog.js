@@ -32,10 +32,7 @@ const startedCheckbox = ()=>{
           }
           patchGame(patchedGame).then(()=> history.push("/"))
       }}></input>
-      <button onClick={() => {
-        history.push(`/games/edit/${game.id}`)
-
-      }}>Edit</button>
+      
       </>
   }
 }
@@ -50,20 +47,27 @@ return (
     <div className="game--btns">
     <div className="game--content">
 
-      <label>Start Game</label>
-      {startedCheckbox()}
     </div>
-      
+
+    <button className="btn" onClick={() => {
+        history.push(`/games/edit/${game.id}`)
+
+      }}>Edit</button>
 
 
-
-
-
-        <button className="deleteGameButton" onClick={()=>{
+        <button className="btn" onClick={()=>{
           
           deleteGame(game).then(()=> history.push("/"))
         }
       }>Delete</button>
+      
+
+      <label>Start Game</label>
+      {startedCheckbox()}
+
+
+
+
     </div>
   </section>
 )

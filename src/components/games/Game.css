@@ -1,0 +1,32 @@
+body {
+  background-color: #a0d6b4;
+  text-decoration: none;
+  color: white;
+  text-transform: lowercase;
+  letter-spacing: 2px;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+.btn {
+  background-color: #317873;
+  border: none;
+  color: white;
+  text-transform: lowercase;
+  text-decoration: none;
+  font-family: 'Noto Sans TC', sans-serif;
+  display: flex;
+  flex-direction: row;
+  margin: 2px;
+  
+}
+
+
+
+.game--name {
+  font-size: 22px;
+}
+
+.game--btns {
+  width: 5%;
+  margin-bottom: 20px;
+}

@@ -22,7 +22,7 @@ export default (props) => {
               {
                   completedGames.map(game => {
                     console.log("Displaying games")
-                      return <CompletedGames {...props} key={game.id} game={game} />
+                      return <CompletedGames {...props} key={game.id} game={game} props={props} />
                   })
               }
           </div>

@@ -1,7 +1,7 @@
 import React, { useContext } from "react"
 import { NoteContext } from "./NoteProvider"
 
-export default ({ note, props, history }) => {
+export default ({ note, history }) => {
   const { deleteNote } = useContext(NoteContext)
 
 
@@ -18,9 +18,9 @@ return (
     
 
 
-        <button className="deleteNoteButton" onClick={()=>{
+        <button className="btn" onClick={()=>{
           
-          deleteNote(note).then(()=> props.history.push("/Active Games"))
+          deleteNote(note).then(()=> history.push("/Active Games"))
         }
       }>Delete</button>
 
